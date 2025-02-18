@@ -62,6 +62,10 @@ public class Charaktere {
         this.produkte = produkte;
     }
 
+    public void kaufeProdukt(Produkte produkte) {
+        this.produkte.add(produkte);
+    }
+
     @Override
     public String toString() {
         return "Charaktere{" +

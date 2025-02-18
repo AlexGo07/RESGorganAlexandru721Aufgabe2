@@ -1,4 +1,4 @@
-package Ui;
+package ui;
 
 import controller.CharaktereController;
 import controller.ProdukteController;
@@ -113,7 +113,7 @@ public class UI {
                     herkunftsregion = scanner.nextLine();
 
                     System.out.println("Preis: ");
-                    preis = scanner.nextInt();
+                    preis = (int) scanner.nextDouble();
                     scanner.nextLine();
 
                     produkteController.add(new Produkte(name, preis, herkunftsregion));

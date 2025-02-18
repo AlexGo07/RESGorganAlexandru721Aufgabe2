@@ -2,10 +2,10 @@ package modele;
 
 public class Produkte {
     private String name;
-    private int preis;
+    private double preis;
     private String Universum;
 
-    public Produkte(String name, int preis, String Universum) {
+    public Produkte(String name, double preis, String Universum) {
         this.name = name;
         this.preis = preis;
         this.Universum = Universum;
@@ -25,7 +25,7 @@ public class Produkte {
         this.name = name;
     }
 
-    public int getPreis() {
+    public double getPreis() {
         return preis;
     }
 
