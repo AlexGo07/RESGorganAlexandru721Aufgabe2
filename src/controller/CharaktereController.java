@@ -20,6 +20,15 @@ public class CharaktereController implements IController<Charaktere, Integer> {
                 .toList();
     }
 
+    public List<Charaktere> aufgabe4(String x) {
+        return getAll().stream()
+                .filter(charaktere -> charaktere.getProdukte().stream()
+                        .anyMatch(produkte -> Objects.equals(produkte.getUniversum(), x)))
+                .toList();
+    }
+
+
+
 
     @Override
     public void add(Charaktere entity) {
