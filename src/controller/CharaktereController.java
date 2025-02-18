@@ -27,6 +27,18 @@ public class CharaktereController implements IController<Charaktere, Integer> {
                 .toList();
     }
 
+    public List<Produkte> aufgabe5(int id, int sort) {
+        Charaktere selectedCharaktere = charaktereRepository.get(id);
+
+        List<Produkte> produkte = selectedCharaktere.getProdukte();
+        if(sort == 1) {
+            produkte.sort(Comparator.comparingInt(Produkte::getPreis));
+        } else {
+            produkte.sort((p1, p2) -> Integer.compare(p2.getPreis(), p1.getPreis()));
+        }
+        return produkte;
+    }
+
 
 
 
